@@ -9,6 +9,25 @@ class Book {
 
   const myLibrary = [];
 
+  // Add a default example book
+  const defaultBook = new Book('The Wizard of Oz', 'L. Frank Baum', 304);
+  myLibrary.push(defaultBook);
+
+  const defaultBook1 = new Book('The Wizard of Oz', 'L. Frank Baum', 304);
+  myLibrary.push(defaultBook1);
+
+  const defaultBook2 = new Book('The Wizard of Oz', 'L. Frank Baum', 304);
+  myLibrary.push(defaultBook2);
+
+  const defaultBook3 = new Book('The Wizard of Oz', 'L. Frank Baum', 304);
+  myLibrary.push(defaultBook3);
+
+  const defaultBook4 = new Book('The Wizard of Oz', 'L. Frank Baum', 304);
+  myLibrary.push(defaultBook4);
+
+  const defaultBook24 = new Book('The Wizard of Oz', 'L. Frank Baum', 304);
+  myLibrary.push(defaultBook24);
+
   function displayBooks() {
     const bookListElement = document.getElementById('book-list');
     bookListElement.innerHTML = '';
@@ -75,3 +94,6 @@ class Book {
 
     addBookDialog.close();
   });
+
+  // Display books on page load
+  displayBooks();
