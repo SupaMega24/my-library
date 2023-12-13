@@ -1,0 +1,19 @@
+
+
+.container {    
+    /* display: grid;
+    position: relative;
+    margin: auto;
+    gap:12px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr 2fr; */
+    
+    
+}
+
+input {
+    border: none;
+    border-bottom: 4px dotted navy;    
+}
+
+
