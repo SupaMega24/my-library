@@ -28,6 +28,25 @@ class Book {
   const defaultBook24 = new Book('The Wizard of Oz', 'L. Frank Baum', 304);
   myLibrary.push(defaultBook24);
 
+  const defaultBook8 = new Book('The Wizard of Oz', 'L. Frank Baum', 304);
+  myLibrary.push(defaultBook8);
+
+  const defaultBook11 = new Book('The Wizard of Oz', 'L. Frank Baum', 304);
+  myLibrary.push(defaultBook11);
+
+  const defaultBook21 = new Book('The Wizard of Oz', 'L. Frank Baum', 304);
+  myLibrary.push(defaultBook21);
+
+  const defaultBook31 = new Book('The Wizard of Oz', 'L. Frank Baum', 304);
+  myLibrary.push(defaultBook31);
+
+  const defaultBook41 = new Book('The Wizard of Oz', 'L. Frank Baum', 304);
+  myLibrary.push(defaultBook41);
+
+  const defaultBook241 = new Book('The Wizard of Oz', 'L. Frank Baum', 304);
+  myLibrary.push(defaultBook241);
+
+
   function displayBooks() {
     const bookListElement = document.getElementById('book-list');
     bookListElement.innerHTML = '';
