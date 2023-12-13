@@ -7,30 +7,32 @@
     <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <h1>My Book Library</h1>
-    
-    <button id="add-book-button">Add Book</button>
+    <div class="container">
+        <h1 class="header">My Book Library</h1>        
+        
+        <button id="add-book-button">Add Book</button>        
 
-    <dialog id="add-book-dialog">
-        <form id="add-book-form">
-        <label for="title">Title:</label>
-        <input type="text" id="title" required>
-        <br>
-        <label for="author">Author:</label>
-        <input type="text" id="author" required>
-        <br>
-        <label for="pages">Pages:</label>
-        <input type="number" id="pages" required>
-        <br>
-        <button type="submit">Add Book</button>
-        </form>
-        <button id="close-dialog-button">Close</button>
-    </dialog>
+        <dialog id="add-book-dialog">
+            <form id="add-book-form">
+            <label for="title">Title:</label>
+            <input type="text" id="title" required>
+            <br>
+            <label for="author">Author:</label>
+            <input type="text" id="author" required>
+            <br>
+            <label for="pages">Pages:</label>
+            <input type="number" id="pages" required>
+            <br>
+            <button type="submit">Add Book</button>
+            </form>
+            <button id="close-dialog-button">Close</button>
+        </dialog>
 
-    <div id="book-list"></div>
+        <section class="book-list">
+            <div id="book-list"></div>
+        </section>
 
-    
-    
+    </div>    
 
     <script src="script.js"></script>
 </body>
