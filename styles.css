@@ -16,4 +16,12 @@ input {
     border-bottom: 4px dotted navy;    
 }
 
+.book-card {
+    border: 2px solid coral;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    font-size: 1rem;
+}
+
 
