@@ -38,16 +38,21 @@ class Book {
       const bookPagesElement = document.createElement('p');
       bookPagesElement.textContent = `${book.pages} pages`;
 
+      const readContainer = document.createElement('div');
+      readContainer.classList.add('read-container'); // Add a class for styling 
+
       const readCheckbox = document.createElement('input');
       readCheckbox.type = 'checkbox';
       readCheckbox.classList.add('read-toggle');
-      bookCard.appendChild(readCheckbox);
+      readContainer.appendChild(readCheckbox);
 
       const readLabel = document.createElement('label');
       readLabel.textContent = 'Read';
       readLabel.for = readCheckbox.id;
-      bookCard.appendChild(readLabel);
-      // readCheckbox.appendChild(readLabel);
+      readLabel.classList.add('read-label')
+      readContainer.appendChild(readLabel);
+
+      bookCard.appendChild(readContainer);      
 
       bookCard.appendChild(bookTitleElement);
       bookCard.appendChild(bookAuthorElement);
