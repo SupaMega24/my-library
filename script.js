@@ -1,9 +1,10 @@
 
 class Book {
-    constructor(title, author, pages) {
+    constructor(title, author, pages, read = false) {
       this.title = title;
       this.author = author;
       this.pages = pages;
+      this.read = read;
     }
   }
 
@@ -11,40 +12,13 @@ class Book {
 
   // Add a default example book
   const defaultBook = new Book('The Wizard of Oz', 'L. Frank Baum', 304);
-  myLibrary.push(defaultBook);
+  myLibrary.unshift(defaultBook);
 
-  const defaultBook1 = new Book('The Wizard of Oz', 'L. Frank Baum', 304);
-  myLibrary.push(defaultBook1);
+  const defaultBook1 = new Book('Of Mice and Men', 'John Steinbeck', 107);
+  myLibrary.unshift(defaultBook1);
 
-  const defaultBook2 = new Book('The Wizard of Oz', 'L. Frank Baum', 304);
-  myLibrary.push(defaultBook2);
-
-  const defaultBook3 = new Book('The Wizard of Oz', 'L. Frank Baum', 304);
-  myLibrary.push(defaultBook3);
-
-  const defaultBook4 = new Book('The Wizard of Oz', 'L. Frank Baum', 304);
-  myLibrary.push(defaultBook4);
-
-  const defaultBook24 = new Book('The Wizard of Oz', 'L. Frank Baum', 304);
-  myLibrary.push(defaultBook24);
-
-  const defaultBook8 = new Book('The Wizard of Oz', 'L. Frank Baum', 304);
-  myLibrary.push(defaultBook8);
-
-  const defaultBook11 = new Book('The Wizard of Oz', 'L. Frank Baum', 304);
-  myLibrary.push(defaultBook11);
-
-  const defaultBook21 = new Book('The Wizard of Oz', 'L. Frank Baum', 304);
-  myLibrary.push(defaultBook21);
-
-  const defaultBook31 = new Book('The Wizard of Oz', 'L. Frank Baum', 304);
-  myLibrary.push(defaultBook31);
-
-  const defaultBook41 = new Book('The Wizard of Oz', 'L. Frank Baum', 304);
-  myLibrary.push(defaultBook41);
-
-  const defaultBook241 = new Book('The Wizard of Oz', 'L. Frank Baum', 304);
-  myLibrary.push(defaultBook241);
+  const defaultBook2 = new Book('Animal Farm', 'George Orwell', 112);
+  myLibrary.unshift(defaultBook2); 
 
 
   function displayBooks() {
@@ -59,10 +33,21 @@ class Book {
       bookTitleElement.textContent = book.title;
 
       const bookAuthorElement = document.createElement('p');
-      bookAuthorElement.textContent = `by ${book.author}`;
+      bookAuthorElement.textContent = `by: ${book.author}`;
 
       const bookPagesElement = document.createElement('p');
       bookPagesElement.textContent = `${book.pages} pages`;
+
+      const readCheckbox = document.createElement('input');
+      readCheckbox.type = 'checkbox';
+      readCheckbox.classList.add('read-toggle');
+      bookCard.appendChild(readCheckbox);
+
+      const readLabel = document.createElement('label');
+      readLabel.textContent = 'Read';
+      readLabel.for = readCheckbox.id;
+      bookCard.appendChild(readLabel);
+      // readCheckbox.appendChild(readLabel);
 
       bookCard.appendChild(bookTitleElement);
       bookCard.appendChild(bookAuthorElement);
@@ -102,7 +87,7 @@ class Book {
     }
 
     const book = new Book(title, author, pages);
-    myLibrary.push(book);
+    myLibrary.unshift(book);
 
     displayBooks();
 
