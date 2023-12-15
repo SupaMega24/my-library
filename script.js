@@ -36,7 +36,25 @@ class Book {
       bookAuthorElement.textContent = `by: ${book.author}`;
 
       const bookPagesElement = document.createElement('p');
-      bookPagesElement.textContent = `${book.pages} pages`;
+      bookPagesElement.textContent = `${book.pages} pages`; 
+      
+      //delete button
+      const deleteButton = document.createElement('button');
+      deleteButton.textContent = 'Delete';
+      deleteButton.classList.add('delete-button');
+
+      // Add a single event listener for the delete buttons
+      bookListElement.addEventListener('click', function handleClick(event) {
+        const deleteButton = event.target.closest('.delete-button');
+        if (deleteButton) {
+          const bookCard = deleteButton.parentElement;
+          const currentBookIndex = Array.from(bookCard.parentNode.children).indexOf(bookCard);
+
+          // Update based on the found index
+          myLibrary.splice(currentBookIndex, 1);
+          bookCard.parentNode.removeChild(bookCard);
+        }
+      });      
 
       const readContainer = document.createElement('div');
       readContainer.classList.add('read-container'); // Add a class for styling 
@@ -51,21 +69,23 @@ class Book {
       readLabel.for = readCheckbox.id;
       readLabel.classList.add('read-label')
       readContainer.appendChild(readLabel);
-
+      
       bookCard.appendChild(readContainer);      
 
       bookCard.appendChild(bookTitleElement);
       bookCard.appendChild(bookAuthorElement);
       bookCard.appendChild(bookPagesElement);
+      bookCard.appendChild(deleteButton);
 
       bookListElement.appendChild(bookCard);
     }
   }
 
+  
   const addBookButton = document.getElementById('add-book-button');
   const addBookDialog = document.getElementById('add-book-dialog');
   const closeDialogButton = document.getElementById('close-dialog-button');
-  const addBookForm = document.getElementById('add-book-form');
+  const addBookForm = document.getElementById('add-book-form');  
 
   addBookButton.addEventListener('click', () => {
     addBookDialog.showModal();
@@ -106,3 +126,5 @@ class Book {
 
   // Display books on page load
   displayBooks();
+
+  
