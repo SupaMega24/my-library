@@ -5,7 +5,10 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    margin: 0;    
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;      
 }
 
 .container {    
@@ -13,12 +16,18 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 12px;     
+    gap: 12px;        
 }
 
-.icon {
-    margin-bottom: -50px;
-    padding-bottom: 0;    
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+}
+.icon {    
+    padding-bottom: 0; 
+    height: 150px;    
 }
 
 input {
@@ -91,7 +100,7 @@ form {
 }
 
 .book-list {
-    max-width: 1300px;
+    max-width: 90vw;
 }
 
 .header {
@@ -106,5 +115,27 @@ form {
     box-shadow: 0 2px 4px;    
 }
 
+.footer {
+    display: flex;
+    align-items: center; 
+    justify-content: center;   
+    gap: 12px;   
+    margin-top: auto;     
+}
 
+.githubIcon:hover {    
+    animation: spin 1s ease-in-out infinite;
+}
 
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+ 
