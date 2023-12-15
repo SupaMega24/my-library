@@ -80,20 +80,39 @@ class Book {
       bookListElement.appendChild(bookCard);
     }
   }
-
   
   const addBookButton = document.getElementById('add-book-button');
   const addBookDialog = document.getElementById('add-book-dialog');
   const closeDialogButton = document.getElementById('close-dialog-button');
   const addBookForm = document.getElementById('add-book-form');  
+  const body = document.body;
 
   addBookButton.addEventListener('click', () => {
     addBookDialog.showModal();
+    body.classList.add('dialog-open');
+    createBackdrop();
   });
 
   closeDialogButton.addEventListener('click', () => {
     addBookDialog.close();
+    body.classList.remove('dialog-open');
+    removeBackdrop();
   });
+
+  // create a backdrop
+
+  function createBackdrop() {
+    const backdrop = document.createElement('div');
+    backdrop.classList.add('dialog-backdrop');
+    document.body.appendChild(backdrop);
+  }
+  
+  function removeBackdrop() {
+    const backdrop = document.querySelector('.dialog-backdrop');
+    if (backdrop) {
+      document.body.removeChild(backdrop);
+    }
+  }  
 
   addBookForm.addEventListener('submit', (event) => {
     event.preventDefault();

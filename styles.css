@@ -41,10 +41,10 @@ input {
     box-shadow: 0 5px 10px;  
     border-radius: 12px;  
     padding: 32px;
+    transform: scale(1.3);    
 }
 
-form {
-    transform: scale(1.1);
+form {    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -138,4 +138,21 @@ form {
       transform: rotate(360deg);
     }
   }
+
+  body.dialog-open {
+    overflow: hidden; /* Prevent scrolling in the background */
+    
+  }
+  
+  .dialog-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    backdrop-filter: hue-rotate(45deg); /* Adjust the blur amount as needed */
+    z-index: 1000; /* Ensure it's above other content */
+  }
+  
  
