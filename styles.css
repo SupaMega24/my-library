@@ -139,8 +139,8 @@ form {
     }
   }
 
-  body.dialog-open {
-    overflow: hidden; /* Prevent scrolling in the background */
+  /* body.dialog-open {
+    overflow: hidden; 
     
   }
   
@@ -150,9 +150,9 @@ form {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
-    backdrop-filter: hue-rotate(45deg); /* Adjust the blur amount as needed */
-    z-index: 1000; /* Ensure it's above other content */
-  }
+    background: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(5px); 
+    z-index: 1000; 
+  } */
   
  
