@@ -5,16 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Library</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="images/book-icon.png">
 </head>
 <body>
     <div class="container">
-        <div class="icon">
-            <img src="images/book-icon.png" alt="Logo">
+        <h1 class="header">My Book Library</h1>
+        <div class="hero">
+            <img src="images/book-icon.png" alt="Logo" class="icon">
+            <button id="add-book-button">Add Book</button>
         </div>
-        <h1 class="header">My Book Library</h1>        
-        
-        <button id="add-book-button">Add Book</button>        
-
         <dialog id="add-book-dialog">
             <form id="add-book-form">
                 <div>
@@ -42,8 +41,14 @@
         <section class="book-list">
             <div id="book-list"></div>
         </section>
-
-    </div>    
+        
+    </div>  
+    <footer class="footer">
+        <p>&copy; 2024 CharlesJones</p>
+        <a href="https://github.com/SupaMega24/my-library" target="_blank" class="githubIcon">
+            <img src="images/githubIcon.png" alt="github icon">
+        </a>
+    </footer>  
 
     <script src="script.js"></script>
 </body>
