@@ -27,7 +27,7 @@ class Book {
 
     for (const book of myLibrary) {
       const bookCard = document.createElement('div');
-      bookCard.classList.add('book-card', 'fade-in');
+      bookCard.classList.add('book-card', 'fade-in');      
 
       const bookTitleElement = document.createElement('h3');
       bookTitleElement.textContent = book.title;
@@ -78,7 +78,7 @@ class Book {
       bookCard.appendChild(bookPagesElement);
       bookCard.appendChild(deleteButton);
 
-      bookListElement.appendChild(bookCard);
+      bookListElement.appendChild(bookCard);      
     }
 
     // Trigger the fade-in effect
@@ -141,7 +141,9 @@ class Book {
     }    
 
     const book = new Book(title, author, pages);
+    book.newlyAdded = true;
     myLibrary.unshift(book);
+
     removeBackdrop();
     displayBooks();
 
