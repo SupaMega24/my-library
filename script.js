@@ -27,7 +27,7 @@ class Book {
 
     for (const book of myLibrary) {
       const bookCard = document.createElement('div');
-      bookCard.classList.add('book-card');
+      bookCard.classList.add('book-card', 'fade-in');
 
       const bookTitleElement = document.createElement('h3');
       bookTitleElement.textContent = book.title;
@@ -80,7 +80,15 @@ class Book {
 
       bookListElement.appendChild(bookCard);
     }
-  }
+
+    // Trigger the fade-in effect
+    setTimeout(() => {
+      const fadeIns = document.querySelectorAll('.fade-in');
+      fadeIns.forEach((card) => {
+        card.classList.add('active');
+      });
+    }, 100);
+  }  
   
   const addBookButton = document.getElementById('add-book-button');
   const addBookDialog = document.getElementById('add-book-dialog');
