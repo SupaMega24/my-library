@@ -5,14 +5,14 @@
 ## Features
 
 - Add books with title, author, and number of pages.
-- Toggle the reading status of each book (Already Read, Reading Now, Haven't Read).
+- Toggle the reading status of each book (Read/NotRead).
 - Delete books from the library.
 - User-friendly interface.
 
 ## Technologies Used
 
 - HTML
-- CSS
+- CSS Flexbox
 - JavaScript
 
 ## How to Use
