@@ -60,7 +60,9 @@ form {
     text-align: center;
     font-size: large;
     box-shadow: 0 5px 10px;
+    
 }
+
 
 .read-container {
     display: flex;
@@ -139,7 +141,7 @@ form {
     }
   }
 
-  /* body.dialog-open {
+  body.dialog-open {
     overflow: hidden; 
     
   }
@@ -151,8 +153,8 @@ form {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5); 
-    backdrop-filter: blur(5px); 
-    z-index: 1000; 
-  } */
+    backdrop-filter: invert(40%); 
+    z-index: 1000;     
+  }
   
  

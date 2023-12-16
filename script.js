@@ -20,7 +20,7 @@ class Book {
   const defaultBook2 = new Book('Animal Farm', 'George Orwell', 112);
   myLibrary.unshift(defaultBook2); 
 
-
+  // Add function to display book cards
   function displayBooks() {
     const bookListElement = document.getElementById('book-list');
     bookListElement.innerHTML = '';
@@ -56,6 +56,7 @@ class Book {
         }
       });      
 
+      // Create Elements and classes to build book card
       const readContainer = document.createElement('div');
       readContainer.classList.add('read-container'); // Add a class for styling 
 
@@ -114,8 +115,9 @@ class Book {
     }
   }  
 
+  // Event listeners for add book form
   addBookForm.addEventListener('submit', (event) => {
-    event.preventDefault();
+    event.preventDefault();    
 
     const titleInput = document.getElementById('title');
     const authorInput = document.getElementById('author');
@@ -128,11 +130,11 @@ class Book {
     if (!title || !author || !pages) {
       alert('Please fill in all fields.');
       return;
-    }
+    }    
 
     const book = new Book(title, author, pages);
     myLibrary.unshift(book);
-
+    removeBackdrop();
     displayBooks();
 
     // Clear form fields after adding book
@@ -146,4 +148,5 @@ class Book {
   // Display books on page load
   displayBooks();
 
+  
   
