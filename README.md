@@ -1,5 +1,7 @@
 # my-library
 
+**Currently a work in progress**
+
 "My Book Library" is a simple web application that allows users to manage and organize their book collection.
 
 ## Features
