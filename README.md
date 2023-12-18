@@ -25,7 +25,7 @@
 
 2. **Toggle Reading Status:**
    - Each book card has a checkbox to toggle the reading status.
-   - Choose between "Already Read," "Reading Now," or "Haven't Read."
+   - Check "Read" If you've finished the book.
 
 3. **Delete a Book:**
    - Each book card has a "Delete" button.
